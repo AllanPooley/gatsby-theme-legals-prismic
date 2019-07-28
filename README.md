@@ -1,7 +1,7 @@
 # Gatsby Theme Legals
 
 - [Gatsby](https://gatsbyjs.org) Theme for adding pretty legal pages.
-- Sources legal pages from [MDX](https://mdxjs.com/) content in your project.
+- Sources legal pages from [Markdown](https://mdxjs.com/) content in your project.
 - Demo at [https://www.littleandbig.com.au/](https://www.littleandbig.com.au/).
 - Made by [Little & Big](https://www.littleandbig.com.au/)
 
