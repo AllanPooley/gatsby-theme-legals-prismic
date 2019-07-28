@@ -1,10 +1,12 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Layout as ThemeLayout, Header, Main, Container } from "theme-ui"
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   return (
     <ThemeLayout>
-      <Header>Gatsby Events Theme</Header>
+      <Helmet title={title} />
+      <Header>Gatsby Legals Theme</Header>
       <Main>
         <Container>{children}</Container>
       </Main>
