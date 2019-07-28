@@ -11,10 +11,26 @@
 yarn add @littleplusbig/gatsby-theme-legals-prismic
 ```
 
-## Prismic Content Type
+## Configuration
 
-1. Create a custom new custom type in Prismic
-2. Make sure that it is repeatable and name it `Legal`
+In your `gatsby-config.js`, under `plugins` add:
+
+```
+{
+  resolve: "gatsby-theme-legals-prismic",
+  options: {
+    repositoryName: PRISMIC_REPO_NAME,
+    accessToken: PRISMIC_API_KEY,
+  },
+},
+```
+
+Replacing `PRISMIC_REPO_NAME` and `PRISMIC_API_KEY` with their respective values.
+
+## Prismic Configuration
+
+1. Create a new custom type in your Prismic repository.
+2. Make sure that it is repeatable and name it `Legal`.
 3. Using the JSON Editor paste in the following content structure:
 
 ```
@@ -25,14 +41,14 @@ yarn add @littleplusbig/gatsby-theme-legals-prismic
       "config" : {
         "single" : "heading1",
         "label" : "Page Name",
-        "placeholder" : "Enter page name"
+        "placeholder" : "Privacy Policy"
       }
     },
     "uid" : {
       "type" : "UID",
       "config" : {
         "label" : "Slug",
-        "placeholder" : "Enter slug"
+        "placeholder" : "privacy-policy"
       }
     },
     "sections" : {
@@ -93,11 +109,11 @@ yarn add @littleplusbig/gatsby-theme-legals-prismic
 }
 ```
 
-## Configuration
+4. Create one or more `Legal` Content pages, each with 1 or more sections.
 
 ## Laying down the law
 
-If you don't already have a privacy policy, or terms and conditions, you can generate one at [Iubenda](https://www.iubenda.com/).
+If you don't already have a Privacy Policy or Terms and Conditions document, you can generate one at [Iubenda](https://www.iubenda.com/).
 
 
 ## Overriding Default Styling
