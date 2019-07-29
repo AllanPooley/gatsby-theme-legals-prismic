@@ -1,38 +1,45 @@
-const fs = require("fs")
-// Make sure the data directory exists
-exports.onPreBootstrap = ({ reporter }) => {
-  const contentPath = "legals"
-  if (!fs.existsSync(contentPath)) {
-    reporter.info(`creating the ${contentPath} directory`)
-    fs.mkdirSync(contentPath)
-  }
-}
+// graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
+const wrapper = promise => promise.then((result) => {
+  if (result.errors) throw result.errors;
+  return result;
+});
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const legalPageTemplate = require.resolve('./src/templates/legal.js');
+
+  const legalPages = await wrapper(
+    graphql(`
+      {
+        allPrismicLegal {
+          edges {
+            node {
+              id
+              uid
             }
           }
         }
       }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+    `),
+  );
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: require.resolve("./src/templates/legal.js"),
-        context: {}, // additional data can be passed via context
-      })
-    })
-  })
-}
+  const legalPageList = legalPages.data.allPrismicLegal.edges;
+
+  /* ---------------------------------------------
+  = Create an individual page for each Information page =
+  ----------------------------------------------- */
+
+  legalPageList.forEach((edge) => {
+    // The uid you assigned in Prismic is the slug!
+    createPage({
+      path: `/${edge.node.uid}/`,
+      component: legalPageTemplate,
+      context: {
+        // Pass the unique ID (uid) through context so the template can filter by it
+        uid: edge.node.uid,
+      },
+    });
+  });
+};

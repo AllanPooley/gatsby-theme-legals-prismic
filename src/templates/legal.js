@@ -3,32 +3,62 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import LegalPageHero from "../components/LegalPageHero"
 import LegalPageBody from "../components/LegalPageBody"
-import LegalPageNavigation from "../components/LegalPageNavigation"
 
-export default function Template({ data }) {
-  const { markdownRemark: legalPage } = data
-  const { html, frontmatter } = legalPage
-  const { title } = frontmatter
+const LegalPageTemplate = (props) => {
+  const {
+    data: {
+      page: {
+        data: pageData,
+      },
+    }
+  } = props;
+  const {
+    pageTitle,
+    sections,
+  } = pageData;
   return (
-    <Layout title={legalPage.frontmatter.title}>
+    <Layout title={pageTitle.text}>
       <LegalPageHero
-        title={title}
+        title={pageTitle.text}
       />
       <LegalPageBody
-        content={html}
+        sections={sections}
       />
     </Layout>
   )
 }
 
+export default LegalPageTemplate;
+
 export const pageQuery = graphql`
-  query LegalPageByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        title
+  query LegalPageBySlug($uid: String!) {
+    page: prismicLegal(uid: { eq: $uid }) {
+      data {
+        pageTitle: page_name {
+          text
+        }
+        sections {
+          content {
+            html
+          }
+          sectionHeading: section_heading {
+            text
+          }
+        }
+        metaTitle: meta_title {
+          html
+          text
+        },
+        metaDescription: meta_description {
+          html
+          text
+        },
+        openGraphImage: open_graph_image {
+          alt
+          copyright
+          url
+        }
       }
     }
   }
-`
+`;

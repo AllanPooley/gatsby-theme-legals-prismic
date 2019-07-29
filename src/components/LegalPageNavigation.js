@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
-// import { getSectionId } from './LegalPageSection';
-
-const isClient = typeof window !== 'undefined';
-
-const generateKey = pre => `${pre}_${new Date().getTime()}`;
-const getSectionAffix = index => `${(index < 9) ? `0${index + 1}` : index + 1}`;
+import {
+  isClient,
+  generateKey,
+  getSectionAffix,
+  getSectionId
+} from '../helpers';
 
 const scrollToPageSection = (event, index) => {
   if (event) event.preventDefault();
-  // const targetEl = document.getElementById(getSectionId(index));
-  // if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const targetEl = document.getElementById(getSectionId(index));
+  if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
 const isInView = (index, sectionOffset) => {
-  // const targetEl = document.getElementById(getSectionId(index));
-  // if (!targetEl) return false;
-  // const rect = targetEl.getBoundingClientRect();
-  // return (rect.top - sectionOffset) < 0;
+  const targetEl = document.getElementById(getSectionId(index));
+  if (!targetEl) return false;
+  const rect = targetEl.getBoundingClientRect();
+  return (rect.top - sectionOffset) < 0;
 };
 
-const LegalPageNavigation = (props) => {
+export const LegalPageNavigation = (props) => {
   const {
     sections,
     isMobile,
@@ -84,5 +84,3 @@ const LegalPageNavigation = (props) => {
     </nav>
   );
 };
-
-export default LegalPageNavigation;
