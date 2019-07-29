@@ -1,39 +1,3 @@
-# Gatsby Theme Legals Prismic
-
-- [Gatsby](https://gatsbyjs.org) Theme for adding pretty legal pages.
-- Builds legal pages sourced from content in [Prismic](https://prismic.io/).
-- Demo at [https://www.littleandbig.com.au/](https://www.littleandbig.com.au/).
-- Made by [Little & Big](https://www.littleandbig.com.au/)
-
-## Installation
-
-```
-yarn add @littleplusbig/gatsby-theme-legals-prismic
-```
-
-## Configuration
-
-In your `gatsby-config.js`, under `plugins` add:
-
-```
-{
-  resolve: "gatsby-theme-legals-prismic",
-  options: {
-    repositoryName: PRISMIC_REPO_NAME,
-    accessToken: PRISMIC_API_KEY,
-  },
-},
-```
-
-Replacing `PRISMIC_REPO_NAME` and `PRISMIC_API_KEY` with their respective values.
-
-## Prismic Configuration
-
-1. Create a new custom type in your Prismic repository.
-2. Make sure that it is repeatable and name it `Legal`.
-3. Using the JSON Editor paste in the following content structure:
-
-```
 {
   "Main" : {
     "page_name" : {
@@ -107,13 +71,3 @@ Replacing `PRISMIC_REPO_NAME` and `PRISMIC_API_KEY` with their respective values
     }
   }
 }
-```
-
-4. Create one or more `Legal` Content pages, each with 1 or more sections.
-
-## Laying down the law
-
-If you don't already have a Privacy Policy or Terms and Conditions document, you can generate one at [Iubenda](https://www.iubenda.com/).
-
-
-## Overriding Default Styling
