@@ -6,6 +6,12 @@
 - Demo at [https://www.littleandbig.com.au/](https://www.littleandbig.com.au/).
 - Made by [Little & Big](https://www.littleandbig.com.au/)
 
+## Why?
+
+Legal pages are probably the most unexciting part of your site, and the last place you want to expend your creative energy.
+
+The purpose of `gatsby-theme-legals` is to do the heavy lifting for you. Super polished, responsive legal pages that you can just plug onto your existing project.
+
 ## Installation
 
 ```
@@ -91,3 +97,7 @@ If you don't already have a Privacy Policy or Terms and Conditions document, you
 
 
 ## Overriding Default Styling
+
+## Markdown? Contentful? WordPress
+
+Soon my friend, soon.

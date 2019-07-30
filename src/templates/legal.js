@@ -11,7 +11,7 @@ const LegalPageTemplate = (props) => {
     data: {
       site: {
         siteMetadata: {
-          homePath,
+          homePath = '/',
           siteName,
         },
       },
@@ -26,7 +26,10 @@ const LegalPageTemplate = (props) => {
   } = pageData;
   return (
     <ThemeProvider theme={theme}>
-      <Layout title={pageTitle.text}>
+      <Layout
+        siteName={siteName}
+        title={pageTitle.text}
+      >
         <LegalPageHero
           title={pageTitle.text}
           homePath={homePath}
