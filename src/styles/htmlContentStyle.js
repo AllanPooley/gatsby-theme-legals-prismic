@@ -16,7 +16,7 @@ const HtmlContentStyle = createGlobalStyle`
   }
 
   a {
-
+    color: ${theme.colors.primary}
   }
 
   h2,
