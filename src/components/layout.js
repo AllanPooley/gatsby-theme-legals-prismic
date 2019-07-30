@@ -1,16 +1,18 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { Layout as ThemeLayout, Header, Main, Container } from "theme-ui"
+import GlobalStyle from '../styles/global'
+import { Layout as ThemeLayout, Main } from "theme-ui"
 
 const Layout = ({ title, children }) => {
   return (
     <ThemeLayout>
+      <GlobalStyle />
       <Helmet title={title} />
-      <Header>Gatsby Legals Theme</Header>
       <Main>
-        <Container>{children}</Container>
+        {children}
       </Main>
     </ThemeLayout>
+
   )
 }
 

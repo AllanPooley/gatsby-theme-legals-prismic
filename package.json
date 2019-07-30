@@ -25,6 +25,7 @@
     "gatsby-plugin-theme-ui": "^0.2.18",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
     "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2",
     "theme-ui": "^0.2.21"
   }
 }

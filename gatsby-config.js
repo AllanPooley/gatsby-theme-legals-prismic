@@ -1,4 +1,13 @@
-module.exports = ({ prismicRepositoryName, prismicAccessToken }) => ({
+module.exports = ({
+  prismicRepositoryName,
+  prismicAccessToken,
+  siteName = null,
+  homePath = '/',
+}) => ({
+  siteMetadata: {
+    homePath,
+    siteName,
+  },
   plugins: [
     'gatsby-theme-ui',
     {
