@@ -24,7 +24,10 @@ export const theme = {
   colors: {
     text: "#000000",
     background: "#FFFFFF",
-    primary: "#653399",
+    primary: "#5B2589",
+    primaryLighter: "#6F2B9F",
+    primaryEvenLighter: "#BB75D1",
+    offWhite: "#FCFAFF"
   },
   sizes: {
     wrapper: "1240px",
