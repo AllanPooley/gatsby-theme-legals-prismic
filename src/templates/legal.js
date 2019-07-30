@@ -63,19 +63,6 @@ export const pageQuery = graphql`
             text
           }
         }
-        metaTitle: meta_title {
-          html
-          text
-        },
-        metaDescription: meta_description {
-          html
-          text
-        },
-        openGraphImage: open_graph_image {
-          alt
-          copyright
-          url
-        }
       }
     }
   }

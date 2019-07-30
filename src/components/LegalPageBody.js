@@ -36,7 +36,7 @@ const LegalPageBody = ({ sections }) => (
         sx={{
           flex: '1',
           marginLeft: ['0px', '0px', '30px', '50px'],
-          padding: ['0 20px', '0 20px', '0 0 400px', '0 0 400px']
+          padding: ['60px 20px', '60px 20px', '0 0 400px', '0 0 400px']
         }}
       >
         { sections && sections.map((section, index) => (
