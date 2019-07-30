@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { useState, useEffect } from 'react';
 import {
   isClient,
   generateKey,
@@ -22,9 +24,8 @@ const isInView = (index, sectionOffset) => {
 export const LegalPageNavigation = (props) => {
   const {
     sections,
-    isMobile,
   } = props;
-  const sectionOffset = isMobile ? 50 : 150;
+  const sectionOffset = 150;
   const [activeSection, setActiveSection] = useState(0);
   const [navOpen, setNavOpen] = useState(false);
   const sectionTitles = sections && sections.map(section => section.sectionHeading.text);
@@ -43,25 +44,33 @@ export const LegalPageNavigation = (props) => {
     };
   });
   return (
-    <nav className="legal-page-navigation">
+    <nav
+      className="legal-page-navigation"
+      sx={{
+        position: 'sticky',
+        top: '100px',
+        left: 0,
+      }}
+    >
       <div className="navigation-container">
-        { isMobile && (
-          <button
-            type="button"
-            className="mobile-section-selector"
-            onClick={() => setNavOpen(!navOpen)}
-            aria-label={`Jump to ${sectionTitles[activeSection]} section`}
-          >
-            <span className="current-active-section">
-              {`${getSectionAffix(activeSection)} ${sectionTitles[activeSection]}`}
-            </span>
-            <div className="icon">
-              <svg viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.6.154l1.697 1.697L5.65 7.5 0 1.851 1.697.154 5.65 4.106z" fill="#FFF" fillRule="nonzero" />
-              </svg>
-            </div>
-          </button>
-        )}
+        <button
+          type="button"
+          className="mobile-section-selector"
+          onClick={() => setNavOpen(!navOpen)}
+          aria-label={`Jump to ${sectionTitles[activeSection]} section`}
+          sx={{
+            display: ['flex', 'none', 'none'],
+          }}
+        >
+          <span className="current-active-section">
+            {`${getSectionAffix(activeSection)} ${sectionTitles[activeSection]}`}
+          </span>
+          <div className="icon">
+            <svg viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.6.154l1.697 1.697L5.65 7.5 0 1.851 1.697.154 5.65 4.106z" fill="#FFF" fillRule="nonzero" />
+            </svg>
+          </div>
+        </button>
         <ul className={`nav-items${navOpen ? ' nav-open' : ''}`}>
           { sectionTitles && sectionTitles.map((sectionTitle, index) => (
             <li

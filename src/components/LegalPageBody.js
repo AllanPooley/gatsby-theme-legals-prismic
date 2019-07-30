@@ -17,12 +17,24 @@ const LegalPageBody = ({ sections }) => (
         position: 'relative',
       }}
     >
-      <div className="col col-left">
+      <div
+        className="col col-left"
+        sx={{
+          width: '300px',
+          marginRight: '50px',
+        }}
+      >
         <LegalPageNavigation
           sections={sections}
         />
       </div>
-      <div className="col col-right">
+      <div
+        className="col col-right"
+        sx={{
+          flex: '1',
+          marginLeft: '50px',
+        }}
+      >
         { sections && sections.map((section, index) => (
             <LegalPageSection
               key={generateKey(index)}

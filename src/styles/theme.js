@@ -12,6 +12,8 @@ export const theme = {
     body: 300,
     subheading: 500,
     heading: 700,
+    bold: 700,
+    medium: 400,
   },
   lineHeights: {
     body: 1.5,
@@ -22,7 +24,7 @@ export const theme = {
     caps: '0.2em',
   },
   colors: {
-    text: "#000000",
+    text: "#333333",
     background: "#FFFFFF",
     primary: "#5B2589",
     primaryLighter: "#6F2B9F",

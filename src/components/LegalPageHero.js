@@ -55,13 +55,16 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         <Link
           className="back-to-home-link"
           to={homePath}
-          sx={{
-            fontSize: 0,
-            letterSpacing: 1,
-            textTransform: 'uppercase',
-          }}
         >
-          <span>Back to home</span>
+          <span
+            sx={{
+              fontSize: 0,
+              letterSpacing: 1,
+              textTransform: 'uppercase',
+            }}
+          >
+            Back to home
+          </span>
         </Link>
       </div>
       <div
