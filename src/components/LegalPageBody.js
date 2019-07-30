@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { LegalPageNavigation } from './LegalPageNavigation';
-import { LegalPageSection } from './LegalPageSection';
-import { generateKey } from '../helpers';
+import { LegalPageNavigation } from './LegalPageNavigation'
+import { LegalPageSection } from './LegalPageSection'
+import { generateKey } from '../helpers'
 
 const LegalPageBody = ({ sections }) => (
   <section className="legal-page-body">
@@ -10,18 +10,21 @@ const LegalPageBody = ({ sections }) => (
       className="container"
       sx={{
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: ['column', 'column', 'row', 'row'],
         maxWidth: '1240px',
         margin: '0 auto',
-        padding: '100px 20px',
+        padding: ['0', '0', '100px 20px', '100px 20px'],
         position: 'relative',
       }}
     >
       <div
         className="col col-left"
         sx={{
-          width: '300px',
-          marginRight: '50px',
+          width: ['100%', '100%', '250px', '300px'],
+          marginRight: ['0px', '0px', '30px', '50px'],
+          position: ['sticky', 'sticky', 'static', 'static'],
+          top: '0',
+          zIndex: '2',
         }}
       >
         <LegalPageNavigation
@@ -32,7 +35,8 @@ const LegalPageBody = ({ sections }) => (
         className="col col-right"
         sx={{
           flex: '1',
-          marginLeft: '50px',
+          marginLeft: ['0px', '0px', '30px', '50px'],
+          padding: ['0 20px', '0 20px', '0 0 400px', '0 0 400px']
         }}
       >
         { sections && sections.map((section, index) => (
@@ -45,6 +49,6 @@ const LegalPageBody = ({ sections }) => (
       </div>
     </div>
   </section>
-);
+)
 
-export default LegalPageBody;
+export default LegalPageBody

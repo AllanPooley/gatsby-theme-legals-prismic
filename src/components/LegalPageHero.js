@@ -8,14 +8,14 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
     sx={{
       backgroundColor: 'primary',
       overflow: 'hidden',
-      padding: '160px 0 0',
+      padding: ['100px 5% 0 0', '100px 5% 0 0', '100px 10% 0', '160px 10% 0'],
     }}
   >
     <div
       className="container"
       sx={{
         maxWidth: '1240px',
-        padding: '0 20px',
+        padding: ['0', '0', '0 20px', '0 20px'],
         margin: '0 auto',
         position: 'relative',
       }}
@@ -23,9 +23,15 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
       <div
         className="content-container"
         sx={{
+          width: '100%',
           maxWidth: '1240px',
           margin: '0 auto',
-          padding: '220px 100px 40px',
+          padding: [
+            '100px 20px 120px',
+            '100px 20px 140px',
+            '140px 100px 60px',
+            '220px 100px 40px',
+          ],
           backgroundColor: 'offWhite',
           position: 'relative',
           'z-index': '3',
@@ -34,7 +40,7 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         {siteName && (
           <span
             sx={{
-              fontSize: 0,
+              fontSize: 1,
               letterSpacing: 1,
               textTransform: 'uppercase',
             }}
@@ -45,7 +51,7 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         <h1
           className="page-title"
           sx={{
-            fontSize: 4,
+            fontSize: [ 5, 6, 6, 7],
             maxWidth: '500px',
             padding: '40px 0'
           }}
@@ -58,7 +64,7 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         >
           <span
             sx={{
-              fontSize: 0,
+              fontSize: 1,
               letterSpacing: 1,
               textTransform: 'uppercase',
             }}
@@ -76,7 +82,12 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
           width: '100%',
           top: 0,
           left: 0,
-          transform: 'translateX(-2vw) translateY(20%)',
+          transform: [
+            'translateX(-2vw) translateY(-5%)',
+            'translateX(-2vw) translateY(-5%)',
+            'translateX(-2vw) translateY(20%)',
+            'translateX(-2vw) translateY(20%)',
+          ],
           'z-index': '2',
         }}
       />
@@ -89,12 +100,17 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
           width: '100%',
           top: 0,
           left: 0,
-          transform: 'translateX(-5vw) translateY(40%)',
+          transform: [
+            'translateX(-5vw) translateY(-10%)',
+            'translateX(-5vw) translateY(-10%)',
+            'translateX(-5vw) translateY(40%)',
+            'translateX(-5vw) translateY(40%)',
+          ],
           'z-index': '1',
         }}
       />
     </div>
   </section>
-);
+)
 
-export default LegalPageHero;
+export default LegalPageHero

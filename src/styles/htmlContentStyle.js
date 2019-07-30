@@ -57,6 +57,7 @@ const HtmlContentStyle = createGlobalStyle`
   }
 
   ul, ol {
+    width: 90%;
     padding-left: 25px;
     margin-bottom: 25px;
 

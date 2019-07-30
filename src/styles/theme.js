@@ -7,13 +7,14 @@ export const theme = {
     body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
     heading: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
   },
-  fontSizes: [16, 20, 24, 36, 80],
+  fontSizes: [14, 16, 20, 24, 36, 44, 64, 80],
   fontWeights: {
     body: 300,
-    subheading: 500,
+    regular: 300,
+    medium: 400,
+    subheading: 400,
     heading: 700,
     bold: 700,
-    medium: 400,
   },
   lineHeights: {
     body: 1.5,
@@ -29,7 +30,11 @@ export const theme = {
     primary: "#5B2589",
     primaryLighter: "#6F2B9F",
     primaryEvenLighter: "#BB75D1",
-    offWhite: "#FCFAFF"
+    white: "#FFFFFF",
+    offWhite: "#FCFAFF",
+    black: "#000000",
+    offBlack: "#333333",
+    grey: "#F3F3F3",
   },
   sizes: {
     wrapper: "1240px",

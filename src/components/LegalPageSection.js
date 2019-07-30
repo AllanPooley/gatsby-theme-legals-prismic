@@ -7,13 +7,13 @@ export const LegalPageSection = ({ index, section }) => {
   const {
     sectionHeading,
     content,
-  } = section;
+  } = section
   return (
     <div
       id={getSectionId(index)}
       className="legal-page-section"
       sx={{
-        marginBottom: '80px',
+        padding: '30px 0',
         maxWidth: '750px',
       }}
     >
@@ -21,7 +21,7 @@ export const LegalPageSection = ({ index, section }) => {
         className="section-title"
         sx={{
           marginBottom: '30px',
-          fontSize: 3,
+          fontSize: 4,
         }}
       >
         {sectionHeading.text}
@@ -30,5 +30,5 @@ export const LegalPageSection = ({ index, section }) => {
         content={content.html}
       />
     </div>
-  );
-};
+  )
+}
