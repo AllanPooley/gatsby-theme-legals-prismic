@@ -3,7 +3,7 @@
   "author": "Allan Pooley",
   "repository": {
     "type": "git",
-    "url":  "https://github.com/littleplusbig/gatsby-theme-legals-prismic",
+    "url":  "https://github.com/littleplusbig/gatsby-theme-legals-prismic"
   },
   "bugs": {
     "url": "https://github.com/littleplusbig/gatsby-theme-legals-prismic/issues"
@@ -17,7 +17,7 @@
     "privacy policy",
     "legal"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
