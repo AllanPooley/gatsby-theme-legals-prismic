@@ -1,3 +1,5 @@
+![Mockups of gatsby-theme-legals-prismic in action](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-legals-demo/master/src/assets/images/gatsby-theme-legals-prismic-mockup.jpg)
+
 # Gatsby Theme Legals Prismic
 
 - [Gatsby](https://gatsbyjs.org) Theme for adding pretty legal pages.
