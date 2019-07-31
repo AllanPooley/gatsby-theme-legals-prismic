@@ -2,7 +2,7 @@
 
 # Gatsby Theme Legals Prismic
 
-- [Gatsby](https://gatsbyjs.org) Theme for adding pretty legal pages.
+- [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding pretty legal pages.
 - Responsive across Mobiles 📱, Tablets 💊 and Desktops 🖥️
 - Builds legal pages sourced from content in [Prismic](https://prismic.io/).
 - Demo at [https://gatsby-theme-legals.netlify.com/](https://gatsby-theme-legals.netlify.com/).
@@ -101,7 +101,9 @@ If you don't already have a Privacy Policy or Terms and Conditions document, you
 
 ### Colors and Styles
 
-In the `src` directory of your project, add a folder titled `gatsby-plugin-theme-ui`, and within that folder a file named `index.js`.
+This project uses [theme-ui](https://theme-ui.com/), allowing some of the styling to be customised to a particular web project.
+
+In order to override the styles, in the `src` directory of your project, add a folder titled `gatsby-plugin-theme-ui`, and within that folder a file named `index.js`.
 
 Inside of this file (`your-gatsby-project/src/gatsby-plugin-theme-ui/index.js`) add the following:
 
@@ -129,7 +131,7 @@ export default merge({}, theme, {
 
 Above are the default values for the theme, which you can change depending on your project.
 
-In particular, the colours accenting each legal document are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
+In particular, the colours accenting each legal page are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
 
 This uses `lodash.merge`, so you'll need to add that package to your project:
 
@@ -141,6 +143,28 @@ Every time you override the theme, you'll need to restart your Gatsby project's 
 
 ### Components
 
+The components that make up the legal pages can be some what customised too. This can be done through concept new to Gatsby Themes called '[Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/)'.
+
+If you wish to override a component, in the `src` directory of your project, create the following directory structure: `@littleplusbig/gatsby-theme-legals-prismic/components`.
+
+There are several components that a legal page, they can all be viewed here: [gatsby-theme-legals-prismic/src/components](https://github.com/littleplusbig/gatsby-theme-legals-prismic/tree/master/src/components)
+
+An example of how these components might be customised is adding your project's `<Header />` and `<Footer />` components to the layout.
+
+In order to do this I create a shadowing `layout.js` in the directory we've just created (`your-gatsby-project/src/@littleplusbig/gatsby-theme-legals-prismic/components/layout.js`):
+
+```
+import React from 'react';
+import { Header, Footer } from '../../somewhere-in-your-project'
+
+export default ({ children }) => (
+  <>
+    <Header />
+    {children}
+    <Footer />
+  </>
+);
+```
 
 ## Markdown? Contentful? WordPress
 
