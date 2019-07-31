@@ -3,7 +3,7 @@
 - [Gatsby](https://gatsbyjs.org) Theme for adding pretty legal pages.
 - Responsive across Mobiles 📱, Tablets 💊 and Desktops 🖥️
 - Builds legal pages sourced from content in [Prismic](https://prismic.io/).
-- Demo at [https://www.littleandbig.com.au/](https://www.littleandbig.com.au/).
+- Demo at [https://gatsby-theme-legals.netlify.com/](https://gatsby-theme-legals.netlify.com/).
 - Made by [Little & Big](https://www.littleandbig.com.au/)
 
 ## Why?
