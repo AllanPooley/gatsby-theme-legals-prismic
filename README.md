@@ -93,12 +93,54 @@ Replacing `PRISMIC_REPO_NAME` and `PRISMIC_API_KEY` with their respective values
 
 4. Create one or more `Legal` Content pages, each with 1 or more sections.
 
-## Laying down the law
+## Laying Down the Law
 
 If you don't already have a Privacy Policy or Terms and Conditions document, you can generate one at [Iubenda](https://www.iubenda.com/).
 
+## Overriding the Theme
 
-## Overriding Default Styling
+### Colors and Styles
+
+In the `src` directory of your project, add a folder titled `gatsby-plugin-theme-ui`, and within that folder a file named `index.js`.
+
+Inside of this file (`your-gatsby-project/src/gatsby-plugin-theme-ui/index.js`) add the following:
+
+```
+import merge from 'lodash.merge';
+import { theme } from '@littleplusbig/gatsby-theme-legals-prismic';
+
+export default merge({}, theme, {
+  fonts: {
+    body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+    heading: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+  },
+  colors: {
+    text: "#333333",
+    background: "#FFFFFF",
+    primary: "#5B2589",
+    primaryLighter: "#6F2B9F",
+    primaryEvenLighter: "#BB75D1",
+    offWhite: "#FCFAFF",
+    offBlack: "#333333",
+    grey: "#F3F3F3",
+  },
+});
+```
+
+Above are the default values for the theme, which you can change depending on your project.
+
+In particular, the colours accenting each legal document are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
+
+This uses `lodash.merge`, so you'll need to add that package to your project:
+
+```
+yarn add lodash.merge
+```
+
+Every time you override the theme, you'll need to restart your Gatsby project's dev server.
+
+### Components
+
 
 ## Markdown? Contentful? WordPress
 
