@@ -49,7 +49,7 @@ export const LegalPageNavigation = (props) => {
       className="legal-page-navigation"
       sx={{
         position: 'sticky',
-        top: ['0', '0', '100px', '100px'],
+        top: ['-1px', '-1px', '100px', '100px'],
         left: 0,
       }}
     >

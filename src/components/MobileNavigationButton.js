@@ -23,7 +23,7 @@ export const MobileNavigationButton = ({
       justifyContent: 'center',
       width: '100%',
       backgroundColor: 'grey',
-      padding: '20px',
+      padding: '21px 20px 20px',
     }}
   >
     <span
@@ -34,6 +34,7 @@ export const MobileNavigationButton = ({
         letterSpacing: 1,
         fontWeight: 'bold',
         textTransform: 'uppercase',
+        textAlign: 'center',
         color: 'primary',
         marginRight: '10px',
       }}
