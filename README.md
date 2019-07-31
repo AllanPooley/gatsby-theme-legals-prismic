@@ -2,10 +2,11 @@
 
 # Gatsby Theme Legals Prismic
 
-- [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding pretty legal pages.
+- [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished legal pages 💅out-of-the-box.
 - Responsive across Mobiles 📱, Tablets 💊 and Desktops 🖥️
-- Builds legal pages sourced from content in [Prismic](https://prismic.io/).
-- Demo at [https://gatsby-theme-legals.netlify.com/](https://gatsby-theme-legals.netlify.com/).
+- Customisable to your brand using [Theme UI](https://theme-ui.com/) 🎨
+- Builds legal pages sourced from content in [Prismic](https://prismic.io/)
+- Demo at [https://gatsby-theme-legals.netlify.com/](https://gatsby-theme-legals.netlify.com/)
 - Made by [Little & Big](https://www.littleandbig.com.au/)
 
 ## Why?
@@ -101,7 +102,7 @@ If you don't already have a Privacy Policy or Terms and Conditions document, you
 
 ### Colors and Styles
 
-This project uses [theme-ui](https://theme-ui.com/), allowing some of the styling to be customised to a particular web project.
+This project uses [theme-ui](https://theme-ui.com/), allowing some of the styling to be customised to your project's brand.
 
 In order to override the styles, in the `src` directory of your project, add a folder titled `gatsby-plugin-theme-ui`, and within that folder a file named `index.js`.
 
@@ -166,6 +167,6 @@ export default ({ children }) => (
 );
 ```
 
-## Markdown? Contentful? WordPress
+## Markdown? Contentful? WordPress?
 
 Soon my friend, soon.
