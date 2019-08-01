@@ -17,7 +17,7 @@
     "privacy policy",
     "legal"
   ],
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -39,11 +39,10 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "@mdx-js/react": "^1.0.27",
-    "gatsby-plugin-theme-ui": "^0.2.18",
+    "gatsby-plugin-theme-ui": "^0.2.25",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
-    "gatsby-theme-ui": "^0.2.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2",
-    "theme-ui": "^0.2.21"
+    "theme-ui": "^0.2.25"
   }
 }

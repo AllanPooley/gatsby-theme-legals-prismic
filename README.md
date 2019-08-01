@@ -37,7 +37,7 @@ In your `gatsby-config.js`, under `plugins` add:
 },
 ```
 
-Replacing `PRISMIC_REPO_NAME` and `PRISMIC_API_KEY` with their respective values.
+Replacing `PRISMIC_REPO_NAME`, `PRISMIC_API_KEY`, `YOUR_SITE_NAME` and `HOME_PATH` with their respective values.
 
 ## Prismic Configuration
 

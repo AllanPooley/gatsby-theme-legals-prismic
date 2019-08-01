@@ -9,7 +9,7 @@ module.exports = ({
     siteName,
   },
   plugins: [
-    'gatsby-theme-ui',
+    'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-source-prismic',
       options: {
