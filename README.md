@@ -109,38 +109,39 @@ In order to override the styles, in the `src` directory of your project, add a f
 Inside of this file (`your-gatsby-project/src/gatsby-plugin-theme-ui/index.js`) add the following:
 
 ```
-import merge from 'lodash.merge';
-import { theme } from '@littleplusbig/gatsby-theme-legals-prismic';
+import baseTheme from '@littleplusbig/gatsby-theme-legals-prismic';
 
-export default merge({}, theme, {
+export default {
+  ...baseTheme,
   fonts: {
-    body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
-    heading: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+    ...baseTheme.fonts,
+    body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
+    heading: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
   },
   colors: {
-    text: "#333333",
-    background: "#FFFFFF",
-    primary: "#5B2589",
-    primaryLighter: "#6F2B9F",
-    primaryEvenLighter: "#BB75D1",
-    offWhite: "#FCFAFF",
-    offBlack: "#333333",
-    grey: "#F3F3F3",
+    ...baseTheme.colors,
+    text: '#333333',
+    background: '#FFFFFF',
+    primary: '#5B2589',
+    primaryLighter: '#6F2B9F',
+    primaryEvenLighter: '#BB75D1',
+    white: '#FFFFFF',
+    offWhite: '#FCFAFF',
+    black: '#000000',
+    offBlack: '#333333',
+    grey: '#F3F3F3',
   },
-});
+};
+
 ```
 
 Above are the default values for the theme, which you can change depending on your project.
 
 In particular, the colours accenting each legal page are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
 
-This uses `lodash.merge`, so you'll need to add that package to your project:
+The complete set of customisable theme values can be explored in [gatsby-theme-legals-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-legals-prismic/blob/master/src/styles/theme.js)
 
-```
-yarn add lodash.merge
-```
-
-Every time you override the theme, you'll need to restart your Gatsby project's dev server.
+More information about `gatsby-plugin-theme-ui` [here](https://www.npmjs.com/package/gatsby-plugin-theme-ui).
 
 ### Components
 
