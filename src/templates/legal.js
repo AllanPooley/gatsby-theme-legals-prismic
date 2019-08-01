@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import LegalPageHero from "../components/LegalPageHero"
 import LegalPageBody from "../components/LegalPageBody"
-import { ThemeProvider } from 'theme-ui'
-import theme from '../styles/theme'
 
 const LegalPageTemplate = (props) => {
   const {
@@ -25,21 +23,19 @@ const LegalPageTemplate = (props) => {
     sections,
   } = pageData;
   return (
-    <ThemeProvider theme={theme}>
-      <Layout
-        siteName={siteName}
+    <Layout
+      siteName={siteName}
+      title={pageTitle.text}
+    >
+      <LegalPageHero
         title={pageTitle.text}
-      >
-        <LegalPageHero
-          title={pageTitle.text}
-          homePath={homePath}
-          siteName={siteName}
-        />
-        <LegalPageBody
-          sections={sections}
-        />
-      </Layout>
-    </ThemeProvider>
+        homePath={homePath}
+        siteName={siteName}
+      />
+      <LegalPageBody
+        sections={sections}
+      />
+    </Layout>
   )
 }
 
