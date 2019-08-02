@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
+import { Styled } from 'theme-ui'
+
 
 const LegalPageHero = ({ title, siteName, homePath }) => (
   <section
@@ -48,19 +50,21 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
             {siteName}
           </span>
         )}
-        <h1
+        <Styled.h1
           className="page-title"
           sx={{
-            fontSize: [ 5, 6, 6, 7],
             maxWidth: '500px',
             padding: '40px 0'
           }}
         >
           {title}
-        </h1>
+        </Styled.h1>
         <Link
           className="back-to-home-link"
           to={homePath}
+          sx={{
+            color: 'primary',
+          }}
         >
           <span
             sx={{

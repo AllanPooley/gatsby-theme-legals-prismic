@@ -55,15 +55,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: ${theme.colors.background};
-    color: ${theme.colors.text};
-    line-height: ${theme.lineHeights.body};
     font-size: 100%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: ${theme.fontWeights.body};
-    font-family: ${theme.fonts.body};
   }
   h1,
   h2,
@@ -71,10 +66,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: ${theme.fonts.heading};
-    line-height: ${theme.lineHeights.heading};
-    font-weight: ${theme.fontWeights.heading};
-    color: ${theme.colors.text};
+    
   }
   img {
     display: block;

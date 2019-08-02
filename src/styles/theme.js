@@ -1,3 +1,10 @@
+const heading = {
+  fontFamily: 'heading',
+  lineHeight: 'heading',
+  fontWeight: 'heading',
+  color: 'text'
+}
+
 export const theme = {
   space: [0, 4, 8, 16, 32],
   breakpoints: [
@@ -39,6 +46,37 @@ export const theme = {
   sizes: {
     wrapper: "1240px",
   },
+  styles: {
+    root: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      lineHeight: 'body',
+    },
+    h1: {
+      ...heading,
+      fontSize: [ 5, 6, 6, 7],
+    },
+    h2: {
+      ...heading,
+      fontSize: 4,
+    },
+    h3: {
+      ...heading,
+      fontSize: 3,
+    },
+    h4: {
+      ...heading,
+      fontSize: 2,
+    },
+    h5: {
+      ...heading,
+      fontSize: 1,
+    },
+    h6: {
+      ...heading,
+      fontSize: 0,
+    },
+  }
 }
 
 export default theme

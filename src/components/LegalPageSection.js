@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import { HtmlContent } from './HtmlContent'
 import { getSectionId } from '../helpers'
+import { Styled } from 'theme-ui'
 
 export const LegalPageSection = ({ index, section }) => {
   const {
@@ -17,15 +18,14 @@ export const LegalPageSection = ({ index, section }) => {
         maxWidth: '750px',
       }}
     >
-      <h2
+      <Styled.h2
         className="section-title"
         sx={{
           marginBottom: '30px',
-          fontSize: 4,
         }}
       >
         {sectionHeading.text}
-      </h2>
+      </Styled.h2>
       <HtmlContent
         content={content.html}
       />
