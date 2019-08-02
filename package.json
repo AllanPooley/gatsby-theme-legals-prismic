@@ -17,7 +17,11 @@
     "privacy policy",
     "legal"
   ],
+<<<<<<< HEAD
   "version": "1.0.9",
+=======
+  "version": "1.0.8",
+>>>>>>> d4454c60cfd68e94b294c677b8aa64e796c05b0b
   "license": "MIT",
   "main": "index.js",
   "scripts": {
