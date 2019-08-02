@@ -109,7 +109,7 @@ In order to override the styles, in the `src` directory of your project, add a f
 Inside of this file (`your-gatsby-project/src/gatsby-plugin-theme-ui/index.js`) add the following:
 
 ```
-import baseTheme from '@littleplusbig/gatsby-theme-legals-prismic';
+import baseTheme from '@littleplusbig/gatsby-theme-legals-prismic/src/gatsby-plugin-theme-ui';
 
 export default {
   ...baseTheme,
@@ -138,6 +138,25 @@ export default {
 Above are the default values for the theme, which you can change depending on your project.
 
 In particular, the colours accenting each legal page are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
+
+For example, here is how I might change the theme colours from shades of purple, to a snazzy blue:
+
+```
+import baseTheme from '@littleplusbig/gatsby-theme-legals-prismic/src/gatsby-plugin-theme-ui';
+
+export default {
+  ...baseTheme,
+  colors: {
+    ...baseTheme.colors,
+    primary: '#22a6b3',
+    primaryLighter: '#7ed6df',
+    primaryEvenLighter: '#c7ecee',
+  },
+};
+
+```
+
+![An example of a theme color change](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-legals-demo/master/src/assets/images/gatsby-theme-legals-prismic-mockup-color-change.jpg)
 
 The complete set of customisable theme values can be explored in [gatsby-theme-legals-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-legals-prismic/blob/master/src/styles/theme.js)
 
