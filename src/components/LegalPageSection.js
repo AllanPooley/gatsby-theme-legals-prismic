@@ -11,7 +11,7 @@ export const LegalPageSection = ({ index, section }) => {
   } = section
   return (
     <div
-      id={getSectionId(index)}
+      id={getSectionId(index, sectionHeading.text)}
       className="legal-page-section"
       sx={{
         padding: '30px 0',
