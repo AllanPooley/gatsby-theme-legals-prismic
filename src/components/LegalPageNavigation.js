@@ -9,14 +9,14 @@ import {
 import { MobileNavigationButton } from './MobileNavigationButton'
 import { NavigationItem } from './NavigationItem'
 
-const scrollToPageSection = (event, index) => {
+const scrollToPageSection = (event, sectionId) => {
   if (event) event.preventDefault()
-  const targetEl = document.getElementById(getSectionId(index))
+  const targetEl = document.getElementById(sectionId)
   if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
-const isInView = (index, sectionOffset) => {
-  const targetEl = document.getElementById(getSectionId(index))
+const isInView = (index, sectionOffset, sectionId) => {
+  const targetEl = document.getElementById(sectionId)
   if (!targetEl) return false
   const rect = targetEl.getBoundingClientRect()
   return (rect.top - sectionOffset) < 0
@@ -30,12 +30,14 @@ export const LegalPageNavigation = (props) => {
   const [activeSection, setActiveSection] = useState(0)
   const [navOpen, setNavOpen] = useState(false)
   const sectionTitles = sections && sections.map(section => section.sectionHeading.text)
+  console.log(sectionTitles);
   useEffect(() => {
     const findActiveSection = async () => {
       if (navOpen) setNavOpen(false)
       let currActiveSection = activeSection
       sectionTitles.forEach((section, index) => {
-        if (isInView(index, sectionOffset)) currActiveSection = index
+        const thisSectionId = getSectionId(index, sectionTitles[index]);
+        if (isInView(index, sectionOffset, thisSectionId)) currActiveSection = index
       })
       if (currActiveSection !== activeSection) setActiveSection(currActiveSection)
     }
