@@ -4,7 +4,7 @@ import { LegalPageNavigation } from './LegalPageNavigation'
 import { LegalPageSection } from './LegalPageSection'
 import { generateKey } from '../helpers'
 
-const LegalPageBody = ({ sections }) => (
+const LegalPageBody = ({ activeSection, sectionInViewHandler, sections }) => (
   <section className="legal-page-body">
     <div
       className="container"
@@ -28,6 +28,7 @@ const LegalPageBody = ({ sections }) => (
         }}
       >
         <LegalPageNavigation
+          activeSection={activeSection}
           sections={sections}
         />
       </div>
@@ -44,6 +45,7 @@ const LegalPageBody = ({ sections }) => (
               key={generateKey(index)}
               index={index}
               section={section}
+              sectionInViewHandler={sectionInViewHandler}
             />
           ))}
       </div>
