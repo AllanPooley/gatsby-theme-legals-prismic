@@ -15,35 +15,20 @@ const scrollToPageSection = (event, sectionId) => {
   if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
-const isInView = (index, sectionOffset, sectionId) => {
-  const targetEl = document.getElementById(sectionId)
-  if (!targetEl) return false
-  const rect = targetEl.getBoundingClientRect()
-  return (rect.top - sectionOffset) < 0
-}
-
 export const LegalPageNavigation = (props) => {
   const {
+    activeSection,
     sections,
   } = props
-  const sectionOffset = 150
-  const [activeSection, setActiveSection] = useState(0)
   const [navOpen, setNavOpen] = useState(false)
   const sectionTitles = sections && sections.map(section => section.sectionHeading.text)
-  console.log(sectionTitles);
   useEffect(() => {
-    const findActiveSection = async () => {
+    const navChecker = async () => {
       if (navOpen) setNavOpen(false)
-      let currActiveSection = activeSection
-      sectionTitles.forEach((section, index) => {
-        const thisSectionId = getSectionId(index, sectionTitles[index]);
-        if (isInView(index, sectionOffset, thisSectionId)) currActiveSection = index
-      })
-      if (currActiveSection !== activeSection) setActiveSection(currActiveSection)
     }
-    if (isClient) window.addEventListener('scroll', findActiveSection)
+    if (isClient) window.addEventListener('scroll', navChecker)
     return () => {
-      if (isClient) window.addEventListener('scroll', findActiveSection)
+      if (isClient) window.addEventListener('scroll', navChecker)
     }
   })
   return (
