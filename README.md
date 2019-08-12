@@ -29,9 +29,9 @@ In your `gatsby-config.js`, under `plugins` add:
 {
   resolve: "gatsby-theme-legals-prismic",
   options: {
-    repositoryName: PRISMIC_REPO_NAME,
-    accessToken: PRISMIC_API_KEY,
-    siteName: YOUR_SITE_NAME // (Optional)
+    prismicRepositoryName: PRISMIC_REPO_NAME,
+    prismicAccessToken: PRISMIC_API_KEY,
+    siteName: YOUR_SITE_NAME, // (Optional)
     homePath: HOME_PATH // (Optional) Defaults to '/'
   },
 },
