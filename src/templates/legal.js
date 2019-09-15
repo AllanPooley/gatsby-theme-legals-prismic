@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import LegalPageHero from '../components/LegalPageHero'
 import LegalPageBody from '../components/LegalPageBody'
 import { Styled } from 'theme-ui'
-import { getSectionId } from '../helpers'
 
 const arraysEqual = (arr1, arr2) => {
   if (arr1.length !== arr2.length)
