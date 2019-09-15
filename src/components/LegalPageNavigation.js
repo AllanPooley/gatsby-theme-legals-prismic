@@ -4,14 +4,13 @@ import { useState, useEffect } from 'react'
 import {
   isClient,
   generateKey,
-  getSectionId
 } from '../helpers'
 import { MobileNavigationButton } from './MobileNavigationButton'
 import { NavigationItem } from './NavigationItem'
 
 const scrollToPageSection = (event, sectionId) => {
   if (event) event.preventDefault()
-  const targetEl = document.getElementById(sectionId)
+  const targetEl = document.getElementById(sectionId);
   if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 

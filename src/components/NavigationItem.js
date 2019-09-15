@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import {
   getSectionAffix,
+  getSectionId,
 } from '../helpers'
 
 export const NavigationItem = ({
@@ -19,7 +20,7 @@ export const NavigationItem = ({
     <button
       type="button"
       className="anchor-link"
-      onClick={event => scrollToHandler(event, index)}
+      onClick={event => scrollToHandler(event, getSectionId(index, sectionTitle))}
       aria-label={`Jump to ${sectionTitle} section`}
       sx={{
         display: 'flex',
