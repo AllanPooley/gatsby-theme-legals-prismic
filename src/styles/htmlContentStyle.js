@@ -1,8 +1,12 @@
-import theme from '../styles/theme'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 const HtmlContentStyle = createGlobalStyle`
-.html-content {
+.gatsby-theme-legals-html-content {
+  * {
+    color: ${theme.colors.text}
+  }
+
   em {
     font-style: italic;
   }
@@ -16,7 +20,7 @@ const HtmlContentStyle = createGlobalStyle`
   }
 
   a {
-    color: ${theme.colors.primary}
+    text-decoration: underline;
   }
 
   h2,
@@ -59,32 +63,20 @@ const HtmlContentStyle = createGlobalStyle`
   ul, ol {
     width: 90%;
     padding-left: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     li {
       margin-left: 15px;
-      margin-bottom: 30px;
-      font-weight: ${theme.fontWeights.medium};
+      margin-bottom: 20px;
     }
   }
 
   ul {
-    list-style-type: none;
+    list-style-type: disc;
 
     li {
+      list-style-type: disc;
       position: relative;
-
-      &:before {
-        content: '';
-        height: 3px;
-        width: 3px;
-        border: 2px solid ${theme.colors.primary};
-        border-radius: 50%;
-        position: absolute;
-        top: 10px;
-        left: -25px;
-        z-index: 1;
-      }
     }
   }
 
@@ -92,10 +84,11 @@ const HtmlContentStyle = createGlobalStyle`
     list-style-type: decimal;
 
     li {
+      list-style-type: decimal;
       margin-left: 10px;
       text-indent: 0.5em;
     }
   }
 }
-`
-export default HtmlContentStyle
+`;
+export default HtmlContentStyle;

@@ -3,9 +3,9 @@ import { jsx } from 'theme-ui'
 import {
   getSectionAffix,
   getSectionId,
-} from '../helpers'
+} from '../../util/helpers'
 
-export const NavigationItem = ({
+const NavigationItem = ({
   index,
   isActive,
   scrollToHandler,
@@ -57,4 +57,6 @@ export const NavigationItem = ({
       </span>
     </button>
   </li>
-)
+);
+
+export default NavigationItem;

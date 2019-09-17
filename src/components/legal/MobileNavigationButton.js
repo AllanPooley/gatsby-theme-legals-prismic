@@ -2,10 +2,10 @@
 import { jsx } from 'theme-ui'
 import {
   getSectionAffix,
-} from '../helpers'
-import theme from '../styles/theme'
+} from '../../util/helpers'
+import theme from '../../styles/theme'
 
-export const MobileNavigationButton = ({
+const MobileNavigationButton = ({
   navOpen,
   activeSection,
   sectionTitles,
@@ -55,4 +55,6 @@ export const MobileNavigationButton = ({
       </svg>
     </div>
   </button>
-)
+);
+
+export default MobileNavigationButton;

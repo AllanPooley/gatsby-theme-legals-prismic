@@ -122,9 +122,9 @@ export default {
     ...baseTheme.colors,
     text: '#333333',
     background: '#FFFFFF',
-    primary: '#5B2589',
-    primaryLighter: '#6F2B9F',
-    primaryEvenLighter: '#BB75D1',
+    primary: '#6F2B9F',
+    primaryDark: '#5B2589',
+    primaryLight: '#BB75D1',
     white: '#FFFFFF',
     offWhite: '#FCFAFF',
     black: '#000000',
@@ -137,7 +137,7 @@ export default {
 
 Above are the default values for the theme, which you can change depending on your project.
 
-In particular, the colours accenting each legal page are controlled by `primary`, `primaryLighter` and `primaryEvenLighter`.
+In particular, the colours accenting each legal page are controlled by `primary`, `primaryLight` and `primaryDark`.
 
 For example, here is how I might change the theme colours from shades of purple, to a snazzy blue:
 
@@ -148,9 +148,9 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#22a6b3',
-    primaryLighter: '#7ed6df',
-    primaryEvenLighter: '#c7ecee',
+    primary: '#7ed6df',
+    primaryDark: '#22a6b3',
+    primaryLight: '#c7ecee',
   },
 };
 

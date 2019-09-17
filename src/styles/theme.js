@@ -4,8 +4,8 @@ export const theme = {
     '500px', '800px', '1080px',
   ],
   fonts: {
-    body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
-    heading: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+    body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
+    heading: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
   },
   fontSizes: [14, 16, 20, 24, 36, 44, 64, 80],
   fontWeights: {
@@ -25,29 +25,32 @@ export const theme = {
     caps: '0.2em',
   },
   colors: {
-    text: "#333333",
-    background: "#FFFFFF",
-    primary: "#5B2589",
-    primaryLighter: "#6F2B9F",
-    primaryEvenLighter: "#BB75D1",
-    white: "#FFFFFF",
-    offWhite: "#FCFAFF",
-    black: "#000000",
-    offBlack: "#333333",
-    grey: "#F3F3F3",
+    text: '#333333',
+    background: '#FFFFFF',
+    primary: '#6F2B9F',
+    primaryDark: '#5B2589',
+    primaryLight: '#BB75D1',
+    white: '#FFFFFF',
+    offWhite: '#FCFAFF',
+    black: '#000000',
+    offBlack: '#333333',
+    grey: '#F3F3F3',
   },
   sizes: {
-    wrapper: "1240px",
+    wrapper: '1240px',
   },
   textStyles: {
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      color: 'text'
+      color: 'text',
     },
   },
   styles: {
+    Main: {
+      backgroundColor: 'background',
+    },
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
@@ -55,11 +58,11 @@ export const theme = {
     },
     h1: {
       variant: 'textStyles.heading',
-      fontSize: [ 5, 6, 6, 7],
+      fontSize: [5, 6, 6, 7],
     },
     h2: {
       variant: 'textStyles.heading',
-      fontSize: 4,
+      fontSize: [3, 3, 4, 4],
     },
     h3: {
       variant: 'textStyles.heading',
@@ -77,7 +80,7 @@ export const theme = {
       variant: 'textStyles.heading',
       fontSize: 0,
     },
-  }
+  },
 }
 
 export default theme

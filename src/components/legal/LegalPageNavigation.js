@@ -3,10 +3,11 @@ import { jsx } from 'theme-ui'
 import { useState, useEffect } from 'react'
 import {
   isClient,
-  generateKey,
-} from '../helpers'
-import { MobileNavigationButton } from './MobileNavigationButton'
-import { NavigationItem } from './NavigationItem'
+} from '../../util/helpers'
+import {
+  MobileNavigationButton,
+  NavigationItem,
+} from '.';
 
 const scrollToPageSection = (event, sectionId) => {
   if (event) event.preventDefault()
@@ -14,7 +15,7 @@ const scrollToPageSection = (event, sectionId) => {
   if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
-export const LegalPageNavigation = (props) => {
+const LegalPageNavigation = (props) => {
   const {
     activeSection,
     sections,
@@ -84,7 +85,7 @@ export const LegalPageNavigation = (props) => {
         >
           { sectionTitles && sectionTitles.map((sectionTitle, index) => (
             <NavigationItem
-              key={generateKey(index)}
+              key={index}
               isActive={activeSection === index}
               sectionTitle={sectionTitle}
               index={index}
@@ -96,3 +97,5 @@ export const LegalPageNavigation = (props) => {
     </nav>
   )
 }
+
+export default LegalPageNavigation;

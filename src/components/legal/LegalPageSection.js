@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { HtmlContent } from './HtmlContent'
-import { getSectionId } from '../helpers'
+import { HtmlContent } from '../common'
+import { getSectionId } from '../../util/helpers'
 import { InView } from 'react-intersection-observer'
 import { Styled } from 'theme-ui'
 
-export const LegalPageSection = ({ index, section, sectionInViewHandler }) => {
+const LegalPageSection = ({ index, section, sectionInViewHandler }) => {
   const {
     sectionHeading,
     content,
@@ -36,4 +36,6 @@ export const LegalPageSection = ({ index, section, sectionInViewHandler }) => {
         />
     </InView>
   )
-}
+};
+
+export default LegalPageSection;

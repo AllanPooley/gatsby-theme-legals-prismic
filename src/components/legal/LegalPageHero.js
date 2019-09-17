@@ -1,14 +1,13 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { Link } from 'gatsby'
-import { Styled } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui';
+import { Link } from 'gatsby';
 
 
 const LegalPageHero = ({ title, siteName, homePath }) => (
   <section
     className="legal-page-hero"
     sx={{
-      backgroundColor: 'primary',
+      backgroundColor: 'primaryDark',
       overflow: 'hidden',
       padding: ['100px 5% 0 0', '100px 5% 0 0', '100px 10% 0', '160px 10% 0'],
     }}
@@ -29,10 +28,10 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
           maxWidth: '1240px',
           margin: '0 auto',
           padding: [
-            '100px 20px 120px',
-            '100px 20px 140px',
+            '120px 20px 120px',
+            '140px 20px 140px',
             '140px 100px 60px',
-            '220px 100px 40px',
+            '200px 100px 120px',
           ],
           backgroundColor: 'offWhite',
           position: 'relative',
@@ -42,9 +41,11 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         {siteName && (
           <span
             sx={{
+              display: 'block',
               fontSize: 1,
               letterSpacing: 1,
               textTransform: 'uppercase',
+              marginBottom: '20px',
             }}
           >
             {siteName}
@@ -53,8 +54,8 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
         <Styled.h1
           className="page-title"
           sx={{
-            maxWidth: '500px',
-            padding: '40px 0'
+            maxWidth: '600px',
+            marginBottom: '40px',
           }}
         >
           {title}
@@ -80,7 +81,7 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
       <div
         className="outer-shadow"
         sx={{
-          backgroundColor: 'primaryEvenLighter',
+          backgroundColor: 'primaryLight',
           position: 'absolute',
           height: '100%',
           width: '100%',
@@ -98,7 +99,7 @@ const LegalPageHero = ({ title, siteName, homePath }) => (
       <div
         className="outer-most-shadow"
         sx={{
-          backgroundColor: 'primaryLighter',
+          backgroundColor: 'primary',
           position: 'absolute',
           height: '100%',
           width: '100%',

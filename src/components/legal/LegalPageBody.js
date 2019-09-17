@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { LegalPageNavigation } from './LegalPageNavigation'
-import { LegalPageSection } from './LegalPageSection'
-import { generateKey } from '../helpers'
+import { jsx } from 'theme-ui';
+import { LegalPageNavigation, LegalPageSection } from '.';
 
 const LegalPageBody = ({ activeSection, sectionInViewHandler, sections }) => (
   <section className="legal-page-body">
@@ -42,7 +40,7 @@ const LegalPageBody = ({ activeSection, sectionInViewHandler, sections }) => (
       >
         { sections && sections.map((section, index) => (
             <LegalPageSection
-              key={generateKey(index)}
+              key={index}
               index={index}
               section={section}
               sectionInViewHandler={sectionInViewHandler}

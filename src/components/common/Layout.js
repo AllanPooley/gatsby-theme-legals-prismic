@@ -1,7 +1,7 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import GlobalStyle from '../styles/global'
-import { Layout as ThemeLayout, Main } from "theme-ui"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Layout as ThemeLayout, Main } from 'theme-ui';
+import GlobalStyle from '../../styles/global';
 
 const Layout = ({ title, siteName, children }) => {
   const pageTitle = siteName ? `${title} | ${siteName}` : title;
@@ -13,8 +13,7 @@ const Layout = ({ title, siteName, children }) => {
         {children}
       </Main>
     </ThemeLayout>
+  );
+};
 
-  )
-}
-
-export default Layout
+export default Layout;
