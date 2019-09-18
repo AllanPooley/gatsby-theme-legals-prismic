@@ -88,11 +88,40 @@ Replacing `PRISMIC_REPO_NAME`, `PRISMIC_API_KEY`, `YOUR_SITE_NAME` and `HOME_PAT
         "label": "Sections"
       }
     }
+  },
+  "SEO": {
+    "meta_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Meta Title",
+        "placeholder": "Enter meta title"
+      }
+    },
+    "meta_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Meta Description",
+        "placeholder": "Enter meta description"
+      }
+    },
+    "open_graph_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1200,
+          "height": 630
+        },
+        "thumbnails": [],
+        "label": "Open Graph Image"
+      }
+    }
   }
 }
 ```
 
-4. Create one or more `Legal` Content pages, each with 1 or more sections.
+4. Create one or more `Legal` Content pages, each with 1 or more sections. Don't forget to populate each page's `SEO` tab!
 
 ## Laying Down the Law
 

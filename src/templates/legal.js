@@ -66,17 +66,26 @@ class LegalPageTemplate extends Component {
         page: {
           data: pageData,
         },
-      }
+      },
+      location,
     } = this.props
     const {
       pageTitle,
       sections,
-    } = pageData
+      metaTitle,
+      metaDescription,
+      openGraphImage,
+    } = pageData;
+    const seoData = {
+      metaTitle,
+      metaDescription,
+      openGraphImage,
+    };
     return (
       <Styled.root>
         <Layout
-          siteName={siteName}
-          title={pageTitle.text}
+          location={location}
+          seoData={seoData}
         >
           <LegalPageHero
             title={pageTitle.text}
@@ -116,6 +125,19 @@ export const pageQuery = graphql`
           sectionHeading: section_heading {
             text
           }
+        }
+        metaTitle: meta_title {
+          html
+          text
+        },
+        metaDescription: meta_description {
+          html
+          text
+        },
+        openGraphImage: open_graph_image {
+          alt
+          copyright
+          url
         }
       }
     }

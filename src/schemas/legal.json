@@ -40,5 +40,34 @@
         "label": "Sections"
       }
     }
+  },
+  "SEO": {
+    "meta_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Meta Title",
+        "placeholder": "Enter meta title"
+      }
+    },
+    "meta_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Meta Description",
+        "placeholder": "Enter meta description"
+      }
+    },
+    "open_graph_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1200,
+          "height": 630
+        },
+        "thumbnails": [],
+        "label": "Open Graph Image"
+      }
+    }
   }
 }
