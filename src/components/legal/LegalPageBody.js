@@ -3,7 +3,12 @@ import { jsx } from 'theme-ui';
 import { LegalPageNavigation, LegalPageSection } from '.';
 
 const LegalPageBody = ({ activeSection, sectionInViewHandler, sections }) => (
-  <section className="legal-page-body">
+  <section
+    className="legal-page-body"
+    sx={{
+      backgroundColor: 'white',
+    }}
+  >
     <div
       className="container"
       sx={{

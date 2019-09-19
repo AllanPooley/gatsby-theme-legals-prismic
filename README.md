@@ -63,6 +63,14 @@ Replacing `PRISMIC_REPO_NAME`, `PRISMIC_API_KEY`, `YOUR_SITE_NAME` and `HOME_PAT
         "placeholder": "privacy-policy"
       }
     },
+    "hero_subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Hero Subtitle",
+        "placeholder": "How we manage your data"
+      }
+    },
     "sections": {
       "type": "Group",
       "config": {

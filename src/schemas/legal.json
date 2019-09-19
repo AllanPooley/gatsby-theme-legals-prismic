@@ -15,6 +15,14 @@
         "placeholder": "privacy-policy"
       }
     },
+    "hero_subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Hero Subtitle",
+        "placeholder": "How we manage your data"
+      }
+    },
     "sections": {
       "type": "Group",
       "config": {
