@@ -71,6 +71,7 @@ class LegalPageTemplate extends Component {
     } = this.props
     const {
       pageTitle,
+      heroSubtitle,
       sections,
       metaTitle,
       metaDescription,
@@ -81,6 +82,8 @@ class LegalPageTemplate extends Component {
       metaDescription,
       openGraphImage,
     };
+    const bannerTitle = pageTitle && pageTitle.text ? pageTitle.text : 'P';
+    const bannerSubtitle = heroSubtitle && heroSubtitle.text ? heroSubtitle.text : 'You have questions, we have answers';
     return (
       <Styled.root>
         <Layout
@@ -88,7 +91,8 @@ class LegalPageTemplate extends Component {
           seoData={seoData}
         >
           <LegalPageHero
-            title={pageTitle.text}
+            title={bannerTitle}
+            subtitle={bannerSubtitle}
             homePath={homePath}
             siteName={siteName}
           />
@@ -116,6 +120,9 @@ export const pageQuery = graphql`
     page: prismicLegal(uid: { eq: $uid }) {
       data {
         pageTitle: page_name {
+          text
+        }
+        heroSubtitle: hero_subtitle {
           text
         }
         sections {

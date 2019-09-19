@@ -37,7 +37,7 @@ const NavigationItem = ({
           letterSpacing: 1,
           textTransform: 'uppercase',
           marginRight: '10px',
-          color: isActive ? 'primary' : 'text',
+          color: isActive ? 'primaryDark' : 'text',
         }}
       >
         {getSectionAffix(index)}
@@ -49,8 +49,8 @@ const NavigationItem = ({
           letterSpacing: 1,
           textTransform: 'uppercase',
           textAlign: 'left',
-          color: isActive ? 'primary' : 'text',
-          fontWeight: isActive ? 'medium' : 'regular',
+          color: isActive ? 'primaryDark' : 'text',
+          fontWeight: isActive ? 'bold' : 'regular',
         }}
       >
         {sectionTitle}
