@@ -18,7 +18,7 @@ export const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.1,
+    heading: 1.2,
   },
   letterSpacings: {
     body: 'normal',
@@ -57,6 +57,7 @@ export const theme = {
       fontSize: [1, 1, 1, 1],
       fontFamily: 'heading',
       fontWeight: 'regular',
+      lineHeight: 'heading',
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
     },
