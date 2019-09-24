@@ -33,9 +33,7 @@ const NavigationItem = ({
       <span
         className="count"
         sx={{
-          fontSize: 0,
-          letterSpacing: 1,
-          textTransform: 'uppercase',
+          variant: 'textStyles.controls',
           marginRight: '10px',
           color: isActive ? 'primaryDark' : 'text',
         }}
@@ -45,9 +43,7 @@ const NavigationItem = ({
       <span
         className="section-title"
         sx={{
-          fontSize: 0,
-          letterSpacing: 1,
-          textTransform: 'uppercase',
+          variant: 'textStyles.controls',
           textAlign: 'left',
           color: isActive ? 'primaryDark' : 'text',
           fontWeight: isActive ? 'bold' : 'regular',

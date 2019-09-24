@@ -46,6 +46,20 @@ export const theme = {
       fontWeight: 'heading',
       color: 'text',
     },
+    label: {
+      fontSize: [2, 2, 3, 3],
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      color: 'text',
+    },
+    controls: {
+      fontSize: [1, 1, 1, 1],
+      fontFamily: 'heading',
+      fontWeight: 'regular',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
   },
   styles: {
     root: {
@@ -76,6 +90,9 @@ export const theme = {
     h6: {
       variant: 'textStyles.heading',
       fontSize: 0,
+    },
+    span: {
+      variant: 'textStyles.label',
     },
   },
 }
