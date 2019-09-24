@@ -18,7 +18,7 @@ export const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.1,
+    heading: 1.2,
   },
   letterSpacings: {
     body: 'normal',
@@ -45,6 +45,21 @@ export const theme = {
       lineHeight: 'heading',
       fontWeight: 'heading',
       color: 'text',
+    },
+    label: {
+      fontSize: [2, 2, 3, 3],
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      color: 'text',
+    },
+    controls: {
+      fontSize: [1, 1, 1, 1],
+      fontFamily: 'heading',
+      fontWeight: 'regular',
+      lineHeight: 'heading',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
   },
   styles: {
@@ -76,6 +91,9 @@ export const theme = {
     h6: {
       variant: 'textStyles.heading',
       fontSize: 0,
+    },
+    span: {
+      variant: 'textStyles.label',
     },
   },
 }
