@@ -11,7 +11,7 @@ module.exports = ({
   plugins: [
     'gatsby-plugin-theme-ui',
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: '@littleplusbig/gatsby-theme-legals-prismic',
       options: {
         repositoryName: prismicRepositoryName,
         accessToken: prismicAccessToken,
