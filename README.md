@@ -7,7 +7,6 @@
 - Customisable to your brand using [Theme UI](https://theme-ui.com/) 🎨
 - Builds legal pages sourced from content in [Prismic](https://prismic.io/)
 - Demo at [https://gatsby-theme-legals.netlify.com/](https://gatsby-theme-legals.netlify.com/)
-- Made by [Little & Big](https://www.littleandbig.com.au/)
 
 ## Why?
 
